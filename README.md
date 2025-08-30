@@ -2,10 +2,24 @@
 
 Laboratory for working with VHDL simulations.
 
-## Guides
+## Quickstart
 
-### Compile a VHDL module and it's simluation
+### Running a single design+test file
 
-### Test a VHDL module
+```bash
+# Analyze step -- Create .o files with your entity
+$ ghdl -a module.vhdl
 
-### Display a simulation waveforms
+# Elaborate step -- create executable from .o files
+$ ghdl -e module.vhdl
+
+# Run step -- executes the binary and genereates wave file
+$ ghdl -r module.vhdl --wave=wave.ghw
+
+# Vizualize waves
+$ gtkwave wave.ghw
+```
+
+### Using separate testbench and design files
+
+> TODO: example with module + testbench
