@@ -1,0 +1,84 @@
+# GHDL simulation files
+*.cf
+*.o
+*.exe
+work-obj*.cf
+
+# Waveform files
+*.vcd
+*.ghw
+*.fst
+
+# Build artifacts
+*.bin
+*.bit
+*.mcs
+
+# Tool-specific files
+# ModelSim/QuestaSim
+work/
+*.wlf
+*.vstf
+transcript
+modelsim.ini
+
+# Vivado
+*.jou
+*.log
+*.str
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+*.gen/
+
+# Quartus
+*.qpf
+*.qsf
+*.qws
+*.rpt
+*.summary
+*.done
+*.pin
+*.sof
+*.pof
+db/
+incremental_db/
+output_files/
+
+# ISE
+*.bgn
+*.drc
+*.ncd
+*.ngc
+*.ngd
+*.ngr
+*.pad
+*.par
+*.pcf
+*.prj
+*.ptwx
+*.stx
+*.syr
+*.twr
+*.twx
+*.unroutes
+*.xpi
+*.mrp
+*.nc1
+*.ngm
+*.prm
+xlnx_auto_0_xdb/
+iseconfig/
+_ngo/
+_xmsgs/
+
+# General
+*.bak
+*.tmp
+*~
+.DS_Store
+Thumbs.db
