@@ -2,6 +2,7 @@
 entity=heartbeat
 filename=$(entity).vhdl
 tmp_file=/tmp/$(filename)
+bindir=bin
 
 $(entity): $(entity).vhdl
 	ghdl -a $<
