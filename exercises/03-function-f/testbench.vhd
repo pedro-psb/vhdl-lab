@@ -1,6 +1,6 @@
--- Funcao booleana F
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;  -- disponibiliza to_unsigned
 
 entity tb_fn_f is
 end entity;
@@ -20,22 +20,15 @@ begin
   d <= pack(3);
   process
   begin
-    pack <= "0000"; wait for 10 ns;
-    pack <= "0001"; wait for 10 ns;
-    pack <= "0010"; wait for 10 ns;
-    pack <= "0011"; wait for 10 ns;
-    pack <= "0100"; wait for 10 ns;
-    pack <= "0101"; wait for 10 ns;
-    pack <= "0110"; wait for 10 ns;
-    pack <= "0111"; wait for 10 ns;
-    pack <= "1000"; wait for 10 ns;
-    pack <= "1001"; wait for 10 ns;
-    pack <= "1010"; wait for 10 ns;
-    pack <= "1011"; wait for 10 ns;
-    pack <= "1100"; wait for 10 ns;
-    pack <= "1101"; wait for 10 ns;
-    pack <= "1110"; wait for 10 ns;
-    pack <= "1111"; wait for 10 ns;
+    -- to_unsigned(<int positivo>, <num de bits>)
+    -- E.g:
+    -- >>> to_unsigned(3, 2) -> 11
+    -- >>> to_unsigned(3, 3) -> 011
+    -- >>> to_unsigned(3, 4) -> 0011
+    for i in 0 to 15 loop
+      pack <= std_logic_vector(to_unsigned(i, 4));
+      wait for 10 ns;
+    end loop;
     wait;
   end process;
 end architecture;
