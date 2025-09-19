@@ -1,20 +1,25 @@
-
 entity=fn_f
 filename=$(entity).vhdl
 tmp_file=/tmp/$(filename)
-bindir=bin
 
-$(entity): $(entity).vhd
+$(entity): $(entity).vhdl
 	ghdl -a $<
 	ghdl -e $@
-	timeout 0.1s ghdl -r $@ --wave=wave.ghw || true
-	gtkwave wave.ghw
 
+.PHONY=wave
+wave:
+	gtkwave dump.vcd
+
+.PHONY=test
+test: $(entity)
+	ghdl -r $@ --wave=wave.ghw || true
+
+.PHONY=format
 format:
 	ghdl --format $(filename) > $(tmp_file)
 	cp -u $(tmp_file) $(filename)
 
+.PHONY=clean
 clean:
 	rm -f *.o *.out *.ghw *.cf $(entity)
 
-.PHONY=clean format

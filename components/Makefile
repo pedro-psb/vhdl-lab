@@ -7,10 +7,9 @@ $(entity): $(entity).vhdl
 	ghdl -a $<
 	ghdl -e $@
 
-.PHONY=run
-run:
-	timeout 0.1s ghdl -r $@ --wave=wave.ghw || true
-	gtkwave wave.ghw
+.PHONY=wave
+wave:
+	gtkwave dump.vcd
 
 .PHONY=test
 test: $(entity)
