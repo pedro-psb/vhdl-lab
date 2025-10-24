@@ -75,6 +75,7 @@ xlnx_auto_0_xdb/
 iseconfig/
 _ngo/
 _xmsgs/
+work/
 
 # General
 *.bak
