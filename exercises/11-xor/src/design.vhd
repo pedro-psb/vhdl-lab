@@ -11,8 +11,8 @@ use ieee.numeric_std.all;
 entity xor_n is
   generic( N : integer := 4 );
   port(
-    data_in  : in std_logic_vector(N-1 downto 0);
-    data_out : out std_logic
+      data_in  : in std_logic_vector(N-1 downto 0);
+      data_out : out std_logic
   );
 end entity;
 
@@ -23,10 +23,10 @@ architecture structural of xor_n is
 
     -- Declaração dos componentes internos que serao utilizados
     component xor_simple is
-      port (
-            a, b : in std_logic;
-            output : out std_logic
-        );
+        port (
+              a, b : in std_logic;
+              output : out std_logic
+          );
     end component;
 begin
     -- Inicializa link inicial
@@ -35,13 +35,12 @@ begin
     -- Conecta link final com output
     data_out <= tmp(N-1);
 
-    -- Instancia xor simples
+    -- Instancia e encadeia N-1 xor simples com as entradas
     gen_fa : for i in 1 to N - 1 generate
-        xs: xor_simple port map (
-            a => tmp(i-1),
-            b => data_in(i),
-            output => tmp(i)
-        );
+          xs: xor_simple port map (
+              a => tmp(i-1),
+              b => data_in(i),
+              output => tmp(i)
+          );
     end generate;
-
 end architecture;
