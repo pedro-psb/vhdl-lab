@@ -28,7 +28,7 @@ is
     
     component full_adder is
         port (
-            a, b, cin : in  std_logic;
+            -- a, b, cin : in  std_logic;
             sum, cout  : out std_logic
         );
     end component;
