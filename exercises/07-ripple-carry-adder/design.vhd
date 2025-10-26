@@ -4,40 +4,32 @@ use  ieee.numeric_std.all;
 
 
 entity ripple_carry_adder is
-    generic (
-        N : integer := 4
-    );
+    generic ( N : integer := 4 );
     port (
-        a    : in  std_logic_vector (N-1 downto 0);	-- First input operand
-        b    : in  std_logic_vector (N-1 downto 0);	-- Second input operand
-        cout : out std_logic;				                -- Carry output bit
-        sum  : out std_logic_vector (N-1 downto 0)	-- Sum output vector
+        a, b : in  std_logic_vector (N-1 downto 0);
+        cout : out std_logic;
+        sum  : out std_logic_vector (N-1 downto 0)
     );
 end entity;
 
 
 architecture structural of ripple_carry_adder
 is
-    -- Declaracao dos sinais internos
+    -- sinais internos
     signal s_carry : std_logic_vector(N - 1 downto 0);
 
-    -- Declaração dos componentes internos que serao utilizados
+    -- componentes internos
     component  half_adder is
         port (
-            a    : in  std_logic;  -- First input bit
-            b    : in  std_logic;  -- Second input bit
-            sum  : out std_logic;  -- Sum output bit
-            cout : out std_logic   -- Carry output bit
+            a, b : in  std_logic;
+            sum, cout : out std_logic
         );
     end component;
     
     component full_adder is
         port (
-            a    : in  std_logic;  -- First input bit
-            b    : in  std_logic;  -- Second input bit
-            cin  : in  std_logic;  -- Carry-in bit
-            sum  : out std_logic;  -- Sum output bit
-            cout : out std_logic   -- Carry-out output bit
+            a, b, cin : in  std_logic;
+            sum, cout  : out std_logic
         );
     end component;
 begin

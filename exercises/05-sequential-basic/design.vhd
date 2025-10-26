@@ -26,11 +26,7 @@ begin
   process(clk) is
   begin
     if (rising_edge(clk)) then
-      if (s = '0') then
-        q <= '1';
-      else
-        q <= d;
-      end if;
+      if (s = '0') then q <= '1'; else q <= d; end if;
     end if;
   end process;
 end architecture;
@@ -39,7 +35,7 @@ end architecture;
 -- Flip-Flop with async active-low set input.
 architecture s_active_low_async of dff is
 begin
-  process(clk,s) is
+  process(clk, s) is
   begin
     if (s = '0') then
       q <= '1';
