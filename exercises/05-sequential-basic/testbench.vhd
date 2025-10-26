@@ -6,7 +6,7 @@ entity tb_dff is
 end entity;
 
 
-architecture sim of tb_dff 
+architecture sim of tb_dff
 is
   -- clock helpers
   constant PERIOD : time := 10 ns;

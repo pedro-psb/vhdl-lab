@@ -53,4 +53,3 @@ begin
         '1' when "1110",
         '0' when others;
 end architecture;
-

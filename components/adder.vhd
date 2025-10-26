@@ -1,5 +1,5 @@
 -- Ripple Full Adder - Somador binaario para entradas de tamanho N
--- 
+--
 -- input:
 --   a, b:  N bits
 -- output:
@@ -31,7 +31,7 @@ is
         a, b : in  std_logic;
         sum, cout : out std_logic
     ); end component;
-    
+
     component full_adder is port (
         a, b, cin : in  std_logic;
         sum, cout  : out std_logic

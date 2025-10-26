@@ -1,5 +1,5 @@
 -- Full Adder
--- 
+--
 -- input:
 --   a, b, cin:  1 bits
 -- output:

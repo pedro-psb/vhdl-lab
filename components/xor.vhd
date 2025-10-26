@@ -1,5 +1,5 @@
 -- XOR simples
--- 
+--
 -- input:
 --   a, b:  1 bits
 -- output:

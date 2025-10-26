@@ -46,8 +46,8 @@ begin
             mean := RESIZE(SHIFT_RIGHT(sum, 2), mean'length);
             tmp <= mean;
         end if;
-        
+
     end process;
     output <= std_logic_vector(tmp);
-    
+
 end;

@@ -1,5 +1,5 @@
 -- D Flip-flop
--- 
+--
 -- arquiteturas:
 --   * behavior_if
 --   * behavior_case

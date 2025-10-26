@@ -1,5 +1,5 @@
 -- Half Adder
--- 
+--
 -- input:
 --   a, b:  1 bits
 -- output:

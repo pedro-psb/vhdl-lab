@@ -1,5 +1,5 @@
 -- Decoder 3x8
--- 
+--
 -- arquiteturas:
 --   * behavior_if
 --   * behavior_case
@@ -75,4 +75,3 @@ begin
     output <= std_logic_vector(output_unsigned);
   end process;
 end architecture;
-

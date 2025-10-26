@@ -25,7 +25,7 @@ is
             sum, cout : out std_logic
         );
     end component;
-    
+
     component full_adder is
         port (
             -- a, b, cin : in  std_logic;

@@ -1,5 +1,5 @@
 -- FSM Sample - Sample de FSM (maquina de Mealy)
--- 
+--
 -- input:
 --   x1, x2: 1 bit - Entradas da fms
 --   clk: 1 bit - Entrada do clock
@@ -16,8 +16,8 @@ entity fsm is port (
     Z : out std_logic;
     SS : out std_logic_vector(1 downto 0)
 ); end entity;
-          
-          
+
+
 architecture fsm of fsm is
     signal PS, NS : std_logic_vector(1 downto 0);
 begin
@@ -27,10 +27,10 @@ begin
         if (rising_edge(CLK)) then PS <= NS;
         end if;
     end process sync_proc;
-  
+
     -- Externalizar estados
     SS <= PS;
-  
+
     -- Processo combinacional
     comb_proc: process(PS, X1, X2) begin
       case PS is

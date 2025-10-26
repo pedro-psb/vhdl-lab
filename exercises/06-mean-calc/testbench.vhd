@@ -6,7 +6,7 @@ entity tb_mean is
 end entity;
 
 
-architecture sim of tb_mean 
+architecture sim of tb_mean
 is
   -- helpers
   constant PERIOD : time := 10 ns;

@@ -6,7 +6,7 @@ entity tb_dec3x8 is
 end entity;
 
 
-architecture sim of tb_dec3x8 
+architecture sim of tb_dec3x8
 is
   signal input :  std_logic_vector(2 downto 0) := "000";
   signal output : std_logic_vector(7 downto 0) := "00000000";
