@@ -32,14 +32,14 @@ entity de2_template is port (
 
 architecture structural of de2_template
 is
-    -- Internal signals
-    signal clk, reset_n : std_logic;
-
     -- Components
     component sample is port (
         clk   : in  std_logic;
         reset : out std_logic
     ); end component;
+
+    -- Internal signals
+    signal clk, reset_n : std_logic;
 begin
     -- General assigments
     clk <= CLOCK_50;

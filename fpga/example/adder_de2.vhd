@@ -39,8 +39,8 @@ begin
 
     a <= SW(N-1 downto 0);  -- e.g: N=3 => 2 downto 0
     b <= SW((2*N)-1 downto N); -- e.g: N=3 => 5 downto 3
-    sum <= LEDR(N-1 downto 0);
-    cout <= LEDR(N);
+    LEDR(N-1 downto 0) <= sum;
+    LEDR(N) <= cout;
 
     -- Main components
     main: adder
