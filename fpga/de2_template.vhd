@@ -30,7 +30,8 @@ entity de2_template is port (
 ); end entity;
 
 
-architecture structural of de2_template is
+architecture structural of de2_template
+is
     -- Internal signals
     signal clk, reset_n : std_logic;
 
